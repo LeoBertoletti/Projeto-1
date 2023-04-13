@@ -1,0 +1,78 @@
+/*
+.topnav {
+    background-color: white;
+    overflow: hidden;
+}
+*/
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("sources/MADE TOMMY Black_PERSONAL USE.otf");
+}
+
+body {
+    margin: 0px;
+    background-image: linear-gradient(to right, #192a51, #416788, #67b6d9);
+    padding-top: 110px;
+    text-align: center;
+}
+
+/*
+.topnav :hover {
+    background-color: #ddd;
+}
+*/
+
+img {
+    height: auto;
+    max-height: 100;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -20px;
+}
+
+#texto-principal {
+    text-align: center;
+    font-family: myFirstFont;
+    font-size: 47;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.caixa {
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#space {
+    padding: 30;
+}
+
+#divisor {
+    font-size: 30;
+    color: lightgray;
+    opacity: 60%;
+    position: relative;
+    top: 3;
+}
+
+input {
+    padding: 10px;
+    color: white;
+    height: 44px;
+    width: 150px;
+    border-style: hidden;
+    background-color: transparent;
+}

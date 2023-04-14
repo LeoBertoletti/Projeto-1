@@ -1,19 +1,15 @@
-/*
-const options = { method: 'GET', headers: { accept: 'application/json' } };
+let dataGlobal;
+const URL = "https://openexchangerates.org/api/latest.json?app_id=082ffb407a9d4a75a14e9ffcab14a77e";
 
-fetch('https://openexchangerates.org/api/latest.json?app_id=082ffb407a9d4a75a14e9ffcab14a77e', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-*/
-async function foo() {
-    let obj;
+const getData = async () => {
+    const response = await fetch(URL);
+    const data = await response.json();
+    dataGlobal = data;
+    return data;
+};
 
-    const res = await fetch('https://openexchangerates.org/api/latest.json?app_id=082ffb407a9d4a75a14e9ffcab14a77e')
+(async () => {
+    await getData();
 
-    obj = await res.json();
 
-    return obj
-}
-
-data = foo()
+})();

@@ -16,7 +16,8 @@ const getData = async () => {
 };
 
 const converter = (id) => {
-    // recebe o código ISO de duas moedas como strings e retorna a conversão da iso1 para iso2
+    // converte o valor presente em inValue ou outValue pelas moedas selecionadas
+    //sempre imprimindo na outra caixa
     if (id === "inValue" || id === "inCurrency") {
         outValue.value = ((dataGlobal.rates[outCurrency.value] * inValue.value) / dataGlobal.rates[inCurrency.value]).toFixed(2)
     } else if (id === "outValue" || id === "outCurrency") {

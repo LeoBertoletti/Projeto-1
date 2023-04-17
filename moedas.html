@@ -25,25 +25,18 @@
         <img id="coin" src="sources/Yellow dollar coin.png">
         <h1 id="texto-principal">Coins Converter</h1>
 
-        <datalist id="moedas">
-            <option value="ARS">
-            <option value="BRL">
-            <option value="CNY">
-            <option value="EUR">
-            <option value="USD">
-        </datalist>
+        <datalist id="listaMoedas"></datalist>
 
         <div class="caixa_container">
             <div class="caixa" style="display: inline-block;">
-                <input id="valor1" type="number" name="valor1" placeholder="Insira um valor">
+                <input id="inValue" type="number" name="valor1" placeholder="Insira um valor">
                 <span id="divisor">|</span>
-                <input id="moeda1" list="moedas" placeholder="Selecione uma moeda">
+                <input id="inCurrency" list="listaMoedas" placeholder="Selecione uma moeda">
             </div>
-            <button id="botao">Inverter</button>
             <div class="caixa" style="display: inline-block;">
-                <input id="valor2" type="text" name="valor2" placeholder="Insira um valor">
+                <input id="outValue" type="text" name="valor2" placeholder="Insira um valor">
                 <span id="divisor">|</span>
-                <input id="moeda2" list="moedas" placeholder="Selecione uma moeda">
+                <input id="outCurrency" list="listaMoedas" placeholder="Selecione uma moeda">
             </div>
         </div>
     </div>

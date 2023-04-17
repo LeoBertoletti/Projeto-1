@@ -72,6 +72,10 @@ img {
 
 }
 
+input::-webkit-calendar-picker-indicator {
+    opacity: 100;
+}
+
 #divisor {
     font-size: 30;
     color: lightgray;

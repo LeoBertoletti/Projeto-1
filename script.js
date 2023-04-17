@@ -1,8 +1,12 @@
 const URL = "https://openexchangerates.org/api/latest.json?app_id=082ffb407a9d4a75a14e9ffcab14a77e";
-const inValue = document.getElementById('inValue')
-const outValue = document.getElementById("outValue")
-const inCurrency = document.getElementById("inCurrency")
-const outCurrency = document.getElementById("outCurrency")
+let inValue = document.getElementById('inValue')
+let outValue = document.getElementById("outValue")
+let inCurrency = document.getElementById("inCurrency")
+let outCurrency = document.getElementById("outCurrency")
+
+function alerta(msg) {
+    alert(msg)
+}
 
 const getData = async () => {
     const response = await fetch(URL);
@@ -11,12 +15,17 @@ const getData = async () => {
     return data;
 };
 
-const conversor = (iso1, iso2, valor) => {
+const converter = (id) => {
     // recebe o código ISO de duas moedas como strings e retorna a conversão da iso1 para iso2
-    return (dataGlobal.rates[iso2] * valor) / dataGlobal.rates[iso1]
+    if (id === "inValue" || id === "inCurrency") {
+        outValue.value = ((dataGlobal.rates[outCurrency.value] * inValue.value) / dataGlobal.rates[inCurrency.value]).toFixed(2)
+    } else if (id === "outValue" || id === "outCurrency") {
+        inValue.value = ((dataGlobal.rates[inCurrency.value] * outValue.value) / dataGlobal.rates[outCurrency.value]).toFixed(2)
+    }
 }
 
 const loadMoedas = (moedas) => {
+    // carrega códigos ISO do json recebido
     const options = Object.keys(moedas);
     options.forEach(option => {
         const fromOption = document.createElement('option');
@@ -25,10 +34,12 @@ const loadMoedas = (moedas) => {
     });
 }
 
-
 (async () => {
     await getData();
-    loadMoedas(dataGlobal.rates);
-
+    loadMoedas(dataGlobal.rates)
+    inValue.addEventListener("input", function () { converter(this.id) })
+    outValue.addEventListener("input", function () { converter(this.id) })
+    inCurrency.addEventListener("input", function () { converter(this.id) })
+    outCurrency.addEventListener("input", function () { converter(this.id) })
 
 })();

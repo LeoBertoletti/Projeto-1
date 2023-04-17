@@ -5,7 +5,6 @@
 -->
 
 <html lang="PT-BR">
-<script src="script.js"></script>
 
 <head>
     <link rel="stylesheet" href="style.css">
@@ -31,16 +30,16 @@
             <div class="caixa" style="display: inline-block;">
                 <input id="inValue" type="number" name="valor1" placeholder="Insira um valor">
                 <span id="divisor">|</span>
-                <input id="inCurrency" list="listaMoedas" placeholder="Selecione uma moeda">
+                <input id="inCurrency" list="listaMoedas" placeholder="Selecionar moeda" value="BRL">
             </div>
             <div class="caixa" style="display: inline-block;">
-                <input id="outValue" type="text" name="valor2" placeholder="Insira um valor">
+                <input id="outValue" type="number" name="valor2" placeholder="Insira um valor">
                 <span id="divisor">|</span>
-                <input id="outCurrency" list="listaMoedas" placeholder="Selecione uma moeda">
+                <input id="outCurrency" list="listaMoedas" placeholder="Selecionar moeda" value="USD">
             </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>

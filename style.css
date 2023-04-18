@@ -84,6 +84,7 @@ input::-webkit-inner-spin-button {
 
 *:focus {
     outline: none;
+    border-radius: 30px;
 }
 
 #divisor {
@@ -104,9 +105,17 @@ input {
 }
 
 select {
+    appearance: none;
     height: 44px;
     width: 150px;
     background: transparent;
     color: white;
     border: hidden;
+    border-radius: 30px;
+}
+
+select option {
+    color: black;
+    background-color: lightgrey;
+    font-weight: 500;
 }

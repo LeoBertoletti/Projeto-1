@@ -4,10 +4,6 @@ let outValue = document.getElementById("outValue")
 let inCurrency = document.getElementById("inCurrency")
 let outCurrency = document.getElementById("outCurrency")
 
-function alerta(msg) {
-    alert(msg)
-}
-
 const getData = async () => {
     const response = await fetch(URL);
     const data = await response.json();
@@ -45,5 +41,4 @@ const loadMoedas = (moedas) => {
     outValue.addEventListener("input", function () { converter(this.id) })
     inCurrency.addEventListener("input", function () { converter(this.id) })
     outCurrency.addEventListener("input", function () { converter(this.id) })
-
 })();

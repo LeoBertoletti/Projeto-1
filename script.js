@@ -35,7 +35,7 @@ const loadMoedas = (moedas) => {
 }
 
 (async () => {
-    await getData();
+    //await getData();
     loadMoedas(dataGlobal.rates)
     inValue.addEventListener("input", function () { converter(this.id) })
     outValue.addEventListener("input", function () { converter(this.id) })

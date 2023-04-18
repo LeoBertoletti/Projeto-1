@@ -29,8 +29,8 @@ body {
 }
 
 img {
-    max-height: 100;
-    max-width: 100;
+    max-height: 110;
+    max-width: 110;
 }
 
 
@@ -46,7 +46,7 @@ img {
 
 .caixa {
     height: fit-content;
-    width: fit-content;
+    width: 325px;
     background-color: transparent;
     border-color: lightgray;
     border-style: solid;
@@ -105,7 +105,6 @@ input {
 }
 
 select {
-    appearance: none;
     height: 44px;
     width: 150px;
     background: transparent;
@@ -118,4 +117,13 @@ select option {
     color: black;
     background-color: lightgrey;
     font-weight: 500;
+    box-shadow: 0px 0px 15px 6px #b7dcec48;
+}
+
+select#inCurrency option[value="BRL"] {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/31/Brasil_Countryball.png);
+}
+
+.caixa:hover {
+    box-shadow: 0px 0px 15px 6px #b7dcec48;
 }

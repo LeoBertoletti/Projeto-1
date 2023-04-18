@@ -29,9 +29,12 @@ const loadMoedas = (moedas) => {
     // carrega códigos ISO do json recebido
     const options = Object.keys(moedas);
     options.forEach(option => {
-        const fromOption = document.createElement('option');
-        fromOption.textContent = option;
-        listaMoedas.appendChild(fromOption);
+        const element_OptionIn = document.createElement("option")
+        const element_OptionOut = document.createElement("option")
+        element_OptionIn.textContent = option
+        element_OptionOut.textContent = option
+        inCurrency.appendChild(element_OptionIn)
+        outCurrency.appendChild(element_OptionOut)
     });
 }
 

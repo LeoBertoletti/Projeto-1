@@ -29,8 +29,8 @@ body {
 }
 
 img {
-    max-height: 100;
-    max-width: 100;
+    max-height: 110;
+    max-width: 110;
 }
 
 
@@ -46,7 +46,7 @@ img {
 
 .caixa {
     height: fit-content;
-    width: fit-content;
+    width: 325px;
     background-color: transparent;
     border-color: lightgray;
     border-style: solid;
@@ -84,6 +84,7 @@ input::-webkit-inner-spin-button {
 
 *:focus {
     outline: none;
+    border-radius: 30px;
 }
 
 #divisor {
@@ -101,4 +102,24 @@ input {
     width: 150px;
     border-style: hidden;
     background-color: transparent;
+}
+
+select {
+    height: 44px;
+    width: 150px;
+    background: transparent;
+    color: white;
+    border: hidden;
+    border-radius: 30px;
+}
+
+select option {
+    color: black;
+    background-color: lightgrey;
+    font-weight: 500;
+    box-shadow: 0px 0px 15px 6px #b7dcec48;
+}
+
+.caixa:hover {
+    box-shadow: 0px 0px 15px 6px #b7dcec48;
 }

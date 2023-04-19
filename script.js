@@ -4,10 +4,6 @@ let outValue = document.getElementById("outValue")
 let inCurrency = document.getElementById("inCurrency")
 let outCurrency = document.getElementById("outCurrency")
 
-function alerta(msg) {
-    alert(msg)
-}
-
 const getData = async () => {
     const response = await fetch(URL);
     const data = await response.json();
@@ -29,9 +25,12 @@ const loadMoedas = (moedas) => {
     // carrega códigos ISO do json recebido
     const options = Object.keys(moedas);
     options.forEach(option => {
-        const fromOption = document.createElement('option');
-        fromOption.textContent = option;
-        listaMoedas.appendChild(fromOption);
+        const element_OptionIn = document.createElement("option")
+        const element_OptionOut = document.createElement("option")
+        element_OptionIn.textContent = option
+        element_OptionOut.textContent = option
+        inCurrency.appendChild(element_OptionIn)
+        outCurrency.appendChild(element_OptionOut)
     });
 }
 
@@ -42,5 +41,4 @@ const loadMoedas = (moedas) => {
     outValue.addEventListener("input", function () { converter(this.id) })
     inCurrency.addEventListener("input", function () { converter(this.id) })
     outCurrency.addEventListener("input", function () { converter(this.id) })
-
 })();
